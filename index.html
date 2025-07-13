@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="hr">
 <head>
-  <title>Download My App</title>
+  <meta charset="UTF-8">
+  <title>Paula's Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #1F1B24;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      color: rgba(255, 255, 255, 0.87);
+      font-size: 3em;
+      margin: 0;
+    }
+
+    p {
+      color: #BB86FC;
+      font-size: 1.2em;
+      margin: 0;
+      margin-top: 5px;
+      letter-spacing: 2px;
+    }
+
+    .button-outline {
+      margin-top: 40px;
+      padding: 12px 36px;
+      font-size: 1em;
+      color: #BB86FC;
+      background: none;
+      border: 2px solid #BB86FC;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .button-outline:hover {
+      background: #BB86FC;
+      color: #1F1B24;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
 </head>
-<body style="text-align:center; margin-top:100px;">
-  <h1>Download My App</h1>
-  <a href="IMG-20250712-WA0045.jpg" download>
-    <style="font-size:20px; padding:10px 20px;">Download</button>
+<body>
+  <h1>Paula's</h1>
+  <p>planner</p>
+  <a href="myapp.apk" download>
+    <button class="button-outline">Preuzmi</button>
   </a>
 </body>
 </html>
