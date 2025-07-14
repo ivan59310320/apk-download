@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Paula's Planner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -14,21 +16,34 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+    }
+
+    h1, .subtitle, .button-outline {
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
     }
 
     h1 {
       color: rgba(255, 255, 255, 0.87);
       font-size: 3em;
       margin: 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+      animation-delay: 0.2s;
     }
 
-    p {
+    .subtitle {
       color: #BB86FC;
-      font-size: 1.2em;
-      margin: 0;
-      margin-top: 5px;
-      letter-spacing: 2px;
+      font-size: 0.95em;
+      margin-top: 10px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      animation-delay: 0.5s;
+      text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
+      animation: fadeIn 1s ease-out forwards, pulseGlow 2.5s ease-in-out infinite;
+      animation-delay: 0.5s, 1.5s;
     }
 
     .button-outline {
@@ -41,6 +56,7 @@
       border-radius: 30px;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
+      animation-delay: 0.8s;
     }
 
     .button-outline:hover {
@@ -51,11 +67,25 @@
     a {
       text-decoration: none;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
+      }
+      50% {
+        text-shadow: 0 0 14px rgba(187, 134, 252, 0.8);
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Paula's</h1>
-  <p>planner</p>
+  <h1>Paula’s</h1>
+  <div class="subtitle">SCHEDULE</div>
   <a href="myapp.apk" download>
     <button class="button-outline">Preuzmi</button>
   </a>
