@@ -24,7 +24,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      line-height: 1;
+      line-height: 1.2;
+      text-align: center;
     }
 
     h1 {
@@ -34,9 +35,35 @@
       font-weight: 600;
       letter-spacing: 3px;
       opacity: 0;
-      transform: translateY(20px);
       animation: fadeIn 1s ease-out forwards;
       animation-delay: 1s;
+    }
+
+    .message {
+      color: #BB86FC;
+      font-size: 1em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
+      opacity: 0;
+    }
+
+    .msg-1 {
+      animation: fadeInOut 5s ease-out forwards;
+      animation-delay: 6s;
+      transform: translateY(-50%);
+    }
+
+    .msg-2 {
+      animation: fadeInOut 5s ease-out forwards;
+      animation-delay: 12s;
+      transform: translateY(-150%);
+    }
+
+    .msg-3 {
+      animation: fadeInOut 5s ease-out forwards;
+      animation-delay: 18s;
+      transform: translateY(-200%);
     }
 
     .subtitle {
@@ -46,11 +73,11 @@
       text-transform: uppercase;
       text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
       margin: 0;
-      text-align: center;
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease-out forwards;
-      animation-delay: 3s;
+      animation: fadeIn 2s ease-out forwards;
+      animation-delay: 26s;
+      transform: translateY(-50%);
+      margin-top: -60px;
     }
 
     .download-button {
@@ -67,8 +94,8 @@
       transition: background 0.3s, color 0.3s;
       opacity: 0;
       transform: translateY(20px);
-      animation: fadeIn 1s ease-out forwards;
-      animation-delay: 6s;
+      animation: fadeIn 1s ease-out forwards, pulseGlow 2s infinite;
+      animation-delay: 31.5s, 33.5s;
     }
 
     .download-button:hover {
@@ -86,11 +113,48 @@
         transform: translateY(0);
       }
     }
+
+    @keyframes fadeInOut {
+      0% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+      10% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      90% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0px rgba(187, 134, 252, 0.5);
+      }
+      50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 15px rgba(187, 134, 252, 0.8);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0px rgba(187, 134, 252, 0.5);
+      }
+    }
   </style>
 </head>
 <body>
   <div class="title-block">
     <h1>Paula</h1>
+    <div class="message msg-1">SRETAN TI ROĐENDAN</div>
+    <div class="message msg-2">NAPRAVIO SAM TI NEŠTO...</div>
+    <div class="message msg-3">OVO JE ZA TEBE...</div>
     <div class="subtitle">SCHEDULE</div>
   </div>
   <a href="https://github.com/ivan59310320/apk-download/releases/download/v1.0/Paula.Calendar.apk" download>
