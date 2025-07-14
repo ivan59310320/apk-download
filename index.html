@@ -2,10 +2,10 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8">
-  <title>Paula's Planner</title>
+  <title>Paula Planner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <!-- Updated Google Fonts link for semibold -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -21,10 +21,11 @@
     }
 
     .title-block {
-      display: inline-block;
-      text-align: center;
-      animation: fadeIn 1s ease-out forwards;
-      animation-delay: 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
     }
 
     h1 {
@@ -32,40 +33,47 @@
       font-size: 3em;
       margin: 0;
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 3px;
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards;
     }
 
     .subtitle {
       color: #BB86FC;
-      font-size: 0.95em;
-      letter-spacing: 6px;
+      font-size: 1em;
+      letter-spacing: 9px;
       text-transform: uppercase;
       text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
-      animation: fadeIn 1s ease-out forwards, pulseGlow 2.5s ease-in-out infinite;
-      animation-delay: 0.5s, 1.5s;
-      margin-top: 16px; /* ~16dp spacing */
+      margin: 0;
+      text-align: center;
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
     }
-
-
 
     .download-button {
       margin-top: 40px;
       padding: 12px 36px;
-      font-size: 1em;
-      color: #1F1B24;
-      background-color: #BB86FC;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-      animation: fadeIn 1s ease-out forwards;
-      animation-delay: 0.8s;
-    }
+      font-size: 0.8em;
+      font-weight: 400; 
+Letter-spacing: 1px;
+
+      
+      color: #BB86FC;
+  background: none; /* no fill */
+  border: 2px solid #BB86FC; /* outlined border */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
 
     .download-button:hover {
-      background-color: #9d6dfc;
-    }
-
+  background: #BB86FC;
+  color: #1F1B24;
+}
     a {
       text-decoration: none;
     }
@@ -74,22 +82,12 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes pulseGlow {
-      0%, 100% {
-        text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
-      }
-      50% {
-        text-shadow: 0 0 14px rgba(187, 134, 252, 0.8);
-      }
-    }
   </style>
 </head>
 <body>
   <div class="title-block">
     <h1>Paula</h1>
     <div class="subtitle">SCHEDULE</div>
-    <div class="underline"></div>
   </div>
   <a href="IMG-20250712-WA0045.jpg" download>
     <button class="download-button">Preuzmi</button>
