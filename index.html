@@ -20,9 +20,11 @@
       overflow: hidden;
     }
 
-    h1, .subtitle, .button-outline {
-      opacity: 0;
+    .title-block {
+      display: inline-block;
+      text-align: center;
       animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.2s;
     }
 
     h1 {
@@ -31,19 +33,28 @@
       margin: 0;
       font-weight: 600;
       letter-spacing: 1px;
-      animation-delay: 0.2s;
     }
 
     .subtitle {
       color: #BB86FC;
       font-size: 0.95em;
-      margin-top: 10px;
       letter-spacing: 6px;
       text-transform: uppercase;
-      animation-delay: 0.5s;
       text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
       animation: fadeIn 1s ease-out forwards, pulseGlow 2.5s ease-in-out infinite;
       animation-delay: 0.5s, 1.5s;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .underline {
+      margin: 12px auto 0;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+      width: 60%;
+      max-width: 200px;
+      animation: fadeIn 1s ease-out forwards;
+      animation-delay: 0.7s;
     }
 
     .button-outline {
@@ -56,6 +67,7 @@
       border-radius: 30px;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
+      animation: fadeIn 1s ease-out forwards;
       animation-delay: 0.8s;
     }
 
@@ -84,9 +96,12 @@
   </style>
 </head>
 <body>
-  <h1>Paula’s</h1>
-  <div class="subtitle">SCHEDULE</div>
-  <a href="IMG-20250712-WA0045.jpg" download>
+  <div class="title-block">
+    <h1>Paula’s</h1>
+    <div class="subtitle">SCHEDULE</div>
+    <div class="underline"></div>
+  </div>
+  <a href="myapp.apk" download>
     <button class="button-outline">Preuzmi</button>
   </a>
 </body>
