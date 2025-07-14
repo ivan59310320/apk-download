@@ -2,7 +2,7 @@
 <html lang="hr">
 <head>
   <meta charset="UTF-8">
-  <title>Paula Planner</title>
+  <title>Paula's Planner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -43,8 +43,7 @@
       text-shadow: 0 0 8px rgba(187, 134, 252, 0.5);
       animation: fadeIn 1s ease-out forwards, pulseGlow 2.5s ease-in-out infinite;
       animation-delay: 0.5s, 1.5s;
-      width: 100%;
-      margin-top: 10px;
+      margin-top: 16px; /* ~16dp spacing */
     }
 
     .underline {
@@ -57,13 +56,13 @@
       animation-delay: 0.7s;
     }
 
-    .button-outline {
+    .download-button {
       margin-top: 40px;
       padding: 12px 36px;
       font-size: 1em;
-      color: #BB86FC;
-      background: none;
-      border: 2px solid #BB86FC;
+      color: #1F1B24;
+      background-color: #BB86FC;
+      border: none;
       border-radius: 30px;
       cursor: pointer;
       transition: background 0.3s, color 0.3s;
@@ -71,9 +70,8 @@
       animation-delay: 0.8s;
     }
 
-    .button-outline:hover {
-      background: #BB86FC;
-      color: #1F1B24;
+    .download-button:hover {
+      background-color: #9d6dfc;
     }
 
     a {
@@ -97,12 +95,12 @@
 </head>
 <body>
   <div class="title-block">
-    <h1>Paula</h1>
+    <h1>Paula’s</h1>
     <div class="subtitle">SCHEDULE</div>
     <div class="underline"></div>
   </div>
-  <a href="myapp.apk" download>
-    <button class="button-outline">Preuzmi</button>
+  <a href="IMG-20250712-WA0045.jpg" download>
+    <button class="download-button">Preuzmi</button>
   </a>
 </body>
 </html>
